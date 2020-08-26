@@ -65,12 +65,6 @@ const addVideoStream = (video, stream) => {
     })
     videoGrid.append(video);
 }
-let name
-document.getElementById('create').addEventListener('click', () => {
-    name = document.getElementById('name').value;
-    document.getElementById("create_room").style.display="none";
-    document.getElementById("main").style.display="flex";
-})
 
 socket.on('createMessage', (user,message) => {
     $('.messages').append(`<li class="message"><b>${user}</b><br>${message}</li><br>`)
